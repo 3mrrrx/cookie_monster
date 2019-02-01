@@ -144,21 +144,18 @@ function mousePressed(){
 		if(mouseY>height/4 -50 && mouseY< height/4 +50){
 			sound1.play();
 			socket.emit('clicked0');//Emitting user click
-			print("ENTRA1");
 		}
 	}
 	if(mouseX>width/4 -75 &&  mouseX< width/4 +75 ){
 		if(mouseY>2*height/4 -50 && mouseY< 2*height/4 +50){
 			sound2.play();
 			socket.emit('clicked1');//Emitting user click
-			print("ENTRA2");
 		}
 	}
 	if(mouseX>width/4 -75 &&  mouseX< width/4 +75 ){
 		if(mouseY>3*height/4 -50 && mouseY< 3*height/4 +50){
 			sound3.play();
 			socket.emit('clicked2');//Emitting user click
-			print("ENTRA3");
 		}
 	}
 	// SECOND COLUMN
@@ -166,21 +163,18 @@ function mousePressed(){
 		if(mouseY>height/4 -50 && mouseY< height/4 +50){
 			sound4.play();
 			socket.emit('clicked3');//Emitting user click
-			print("ENTRA4");
 		}
 	}
 	if(mouseX>3*width/4 -75 &&  mouseX< 3*width/4 +75 ){
 		if(mouseY>2*height/4 -50 && mouseY< 2*height/4 +50){
 			sound5.play();
 			socket.emit('clicked4');//Emitting user click
-			print("ENTRA5");
 		}
 	}
 	if(mouseX>3*width/4 -75 &&  mouseX< 3*width/4 +75 ){
 		if(mouseY>3*height/4 -50 && mouseY< 3*height/4 +50){
 			sound6.play();
 			socket.emit('clicked5');//Emitting user click
-			print("ENTRA6");
 		}
 	}
 }
