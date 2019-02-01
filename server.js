@@ -33,7 +33,7 @@ server.on('connection', function(socket)
     //when user click the button
     socket.on('clicked0',function(){
         counter0+=1;//increments global click count
-        console.log("clicked0:  " + counter0)
+        console.log("clicked:  " + counter0 + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5)
         server.emit('click_count0',counter0);//send to all users new counter value
     });
 
@@ -44,7 +44,7 @@ server.on('connection', function(socket)
     //when user click the button
     socket.on('clicked1',function(){
         counter1+=1;//increments global click count
-        console.log("clicked1:  " + counter1)
+        console.log("clicked:  " + counter0 + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5)
         server.emit('click_count1',counter1);//send to all users new counter value
     });
 
@@ -55,7 +55,7 @@ server.on('connection', function(socket)
     //when user click the button
     socket.on('clicked2',function(){
         counter2+=1;//increments global click count
-        console.log("clicked2:  " + counter2)
+        console.log("clicked:  " + counter0 + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5)
         server.emit('click_count2',counter2);//send to all users new counter value
     });
 
@@ -66,7 +66,7 @@ server.on('connection', function(socket)
     //when user click the button
     socket.on('clicked3',function(){
         counter3+=1;//increments global click count
-        console.log("clicked3:  " + counter3)
+        console.log("clicked:  " + counter0 + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5)
         server.emit('click_count3',counter3);//send to all users new counter value
     });
 
@@ -76,7 +76,7 @@ server.on('connection', function(socket)
     //when user click the button
     socket.on('clicked4',function(){
         counter4+=1;//increments global click count
-        console.log("clicked4:  " + counter4)
+        console.log("clicked:  " + counter0 + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5)
         server.emit('click_count4',counter4);//send to all users new counter value
     });
 
@@ -86,7 +86,7 @@ server.on('connection', function(socket)
     //when user click the button
     socket.on('clicked5',function(){
         counter5+=1;//increments global click count
-        console.log("clicked5:  " + counter5)
+        console.log("clicked:  " + counter0 + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5)
         server.emit('click_count5',counter5);//send to all users new counter value
     });
 
