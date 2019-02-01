@@ -7,15 +7,25 @@ var sound4;
 var sound5;
 var sound6;
 
+var waitTime;
+var startTime;
+var sounds=[];
+var colours=[];
 
-var counter0=0;//Initial counter value 
-var counter1=0;//Initial counter value 
-var counter2=0;//Initial counter value 
-var counter3=0;//Initial counter value 
-var counter4=0;//Initial counter value 
-var counter5=0;//Initial counter value 
+var counter0=0;//Initial counter value
+var counter1=0;//Initial counter value
+var counter2=0;//Initial counter value
+var counter3=0;//Initial counter value
+var counter4=0;//Initial counter value
+var counter5=0;//Initial counter value
+
+var secuenceNumber=0;
+
 
 var socket = io();//connect to the socket
+var hours;
+var minutes;
+var seconds;
 
 socket.on('connect',function()
 {
@@ -40,62 +50,92 @@ socket.on('click_count5',function(value) {counter5 = value;});
 
 function preload() {
 
- sound1 = new Audio('assets/Sound1.mp3');
- sound2 = new Audio('assets/Sound2.mp3');
- sound3 = new Audio('assets/Sound3.mp3');
- sound4 = new Audio('assets/Sound4.mp3');
- sound5 = new Audio('assets/Sound5.mp3');
- sound6 = new Audio('assets/Sound6.mp3');
+
+ sound1 = new Audio('assets/Sound0.mp3');
+ sound2 = new Audio('assets/Sound1.mp3');
+ sound3 = new Audio('assets/Sound2.mp3');
+ sound4 = new Audio('assets/Sound3.mp3');
+ sound5 = new Audio('assets/Sound4.mp3');
+ sound6 = new Audio('assets/Sound5.mp3');
+
+
+ sounds[0] = new Audio('assets/Sound0.mp3');
+ sounds[1] = new Audio('assets/Sound1.mp3');
+ sounds[2] = new Audio('assets/Sound2.mp3');
+ sounds[3] = new Audio('assets/Sound3.mp3');
+ sounds[4] = new Audio('assets/Sound4.mp3');
+ sounds[5] = new Audio('assets/Sound5.mp3');
 
 }
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	background(100);
-/*
-	sound1.setVolume(0.1);
-	sound2.setVolume(0.1);
-	sound3.setVolume(0.1);
-	sound4.setVolume(0.1);
-	sound5.setVolume(0.1);
-	sound6.setVolume(0.1);
-*/
+  startTime = 0;
+  waitTime = 2000; // 3 segundos
+
+  colours[0] = color('#3E78B2');
+	colours[1] = color('#FA8334');
+	colours[2] = color('#976BAE');
+	colours[3] = color('#F3CA40');
+	colours[4] = color('#FE5F55');
+	colours[5] = color('#70C1B3');
 }
 
 function draw() {
-	background(100);
+	//background(100);
+  //background(colours[ 1 ]);
 	noStroke();  // FIRST COLUMN
 	fill(200,100,0);
-	rect( width/4 -75 ,height/4 -50, 150, 100 );
+	rect( 0 ,0, width/2-10, height/3 );
 	fill(0);
-  	textSize(30);
-  	text(counter0,width/4  ,height/4  );
+  textSize(30);
+  text(counter0,width/4  ,height/4  );
 	fill(200,100,100);
-	rect( width/4 -75 ,2*height/4 -50, 150, 100 );
+	rect( 0 , height/3 , width/2-10, height/3 );
 	fill(0);
-  	textSize(30);
-  	text(counter1,width/4  ,2*height/4  );
+  textSize(30);
+  text(counter1,width/4  ,2*height/4  );
 	fill(200,100,200);
-	rect( width/4 -75 ,3*height/4 -50, 150, 100 );
+	rect( 0 , 2*height/3, width/2-10, height/3 );
 	fill(0);
-  	textSize(30);
-  	text(counter2,width/4  ,3*height/4  );
-
+  textSize(30);
+  text(counter2,width/4  ,3*height/4  );
 	fill(200,100,0); // SECOND COLUMN
 	rect( 3*width/4 -77 ,height/4 -50, 150, 100 );
 	fill(0);
-  	textSize(30);
-  	text(counter3,3*width/4  ,height/4  );
+  textSize(30);
+  text(counter3,3*width/4  ,height/4  );
 	fill(200,100,100);
 	rect( 3*width/4 -75 ,2*height/4 -50, 150, 100 );
 	fill(0);
-  	textSize(30);
-  	text(counter4,3*width/4  ,2*height/4  );
+  textSize(30);
+  text(counter4,3*width/4  ,2*height/4  );
 	fill(200,100,200);
 	rect( 3*width/4 -75 ,3*height/4-50, 150, 100 );
 	fill(0);
   	textSize(30);
   	text(counter5,3*width/4  ,3*height/4  );
+
+  //console.log("millis: "+parseInt(millis())+" TiempoInicio: "+parseInt(startTime));
+  hours=hour();
+  minutes=minute();
+  seconds=second();
+  //console.log("hour: "+hours+" Minute: "+minutes+" Seconds: "+seconds);
+  if(hours>=16 && minutes>=17 && seconds>=0){
+
+    if (millis() - startTime > waitTime) {
+      console.log(parseInt(secuenceNumber));
+      sounds[ parseInt(secuenceNumber) ].play();
+      background(colours[ parseInt(secuenceNumber) ]);
+      //sounds[ 0 ].play();
+      secuenceNumber++;
+      if(secuenceNumber>5){
+        secuenceNumber=0;
+      }
+      startTime = millis();
+	 }
+  }
 }
 
 function mousePressed(){
@@ -160,7 +200,3 @@ function mouseReleased(){
   sound6.pause();
   sound6.currentTime = 0;
 }
-
-
-
-
