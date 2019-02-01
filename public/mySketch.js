@@ -70,7 +70,7 @@ function setup() {
 createCanvas(windowWidth, windowHeight);
 background(100);
   startTime = 0;
-  waitTime = 2500; // 3 segundos
+  waitTime = 15000; // 3 segundos
 
   colours[0] = color('#3E78B2');
 colours[1] = color('#FA8334');
@@ -122,7 +122,7 @@ fill(0);
   minutes=minute();
   seconds=second();
   //console.log("hour: "+hours+" Minute: "+minutes+" Seconds: "+seconds);
-  if(hours>=18 && minutes>=14 /*&& seconds>=0*/){
+  if(hours>=18 && minutes>=23 /*&& seconds>=0*/){
     console.log("Here");
     if (millis() - startTime > waitTime) {
       console.log(parseInt(secuenceNumber));
