@@ -122,7 +122,7 @@ fill(0);
   minutes=minute();
   seconds=second();
   //console.log("hour: "+hours+" Minute: "+minutes+" Seconds: "+seconds);
-  if(hours>=18 && minutes>=2 /*&& seconds>=0*/){
+  if(hours>=18 && minutes>=9 /*&& seconds>=0*/){
     console.log("Here");
     if (millis() - startTime > waitTime) {
       console.log(parseInt(secuenceNumber));
