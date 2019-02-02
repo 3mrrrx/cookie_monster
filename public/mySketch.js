@@ -31,12 +31,12 @@ socket.on('connect',function()
 });
 
 //Listen from server.js
-socket.on('click_count0',function(value){counter0 = value; console.log("counter0: "+ counter0);});
-socket.on('click_count1',function(value){counter2 = value; console.log("counter1: "+ counter1);});
-socket.on('click_count2',function(value){counter3 = value; console.log("counter2: "+ counter2);});
-socket.on('click_count3',function(value){counter4 = value; console.log("counter3: "+ counter3);});
-socket.on('click_count4',function(value){counter5 = value; console.log("counter4: "+ counter4);});
-socket.on('click_count5',function(value){counter6 = value; console.log("counter5: "+ counter5);});
+socket.on('click_count0',function(value){counter0 = value; console.log("clicked:  " + counter0 + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5);});
+socket.on('click_count1',function(value){counter2 = value; console.log("clicked:  " + counter0 + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5);});
+socket.on('click_count2',function(value){counter3 = value; console.log("clicked:  " + counter0 + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5);});
+socket.on('click_count3',function(value){counter4 = value; console.log("clicked:  " + counter0 + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5);});
+socket.on('click_count4',function(value){counter5 = value; console.log("clicked:  " + counter0 + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5);});
+socket.on('click_count5',function(value){counter6 = value; console.log("clicked:  " + counter0 + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5);});
 
 // listen to server
 socket.on('click_count0',function(value) {counter0 = value;});
@@ -123,7 +123,7 @@ fill(0);
   seconds=second();
   //console.log("hour: "+hours+" Minute: "+minutes+" Seconds: "+seconds);
   if(hours>=18 && minutes>=27 /*&& seconds>=0*/){
-    console.log("Here");
+    //console.log("Here");
     if (millis() - startTime > waitTime) {
       console.log(parseInt(secuenceNumber));
       sounds[ parseInt(secuenceNumber) ].play();
