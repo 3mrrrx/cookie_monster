@@ -14,7 +14,7 @@ var boton3;
 var boton4;
 var boton5;
 var boton6;
-var perfomanceCase=3;
+var perfomanceCase=1;
 var alreadyExecute=false;
 
 
