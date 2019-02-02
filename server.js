@@ -18,6 +18,11 @@ var counter3=0;//Initial counter value
 var counter4=0;//Initial counter value 
 var counter5=0;//Initial counter value 
 
+
+var events = 0;
+var events_old 
+
+
 // app.get('/', function(req, res) {
 
 //         res.sendFile(__dirname + '/index.html');
@@ -100,11 +105,17 @@ server.on('connection', function(socket)
         server.emit('click_count5',counter5);//send to all users new counter value
     });
 
-socket.on('disconnect', function () {
-    users_count-=1;
-    console.log('a user dis-connected, number of users:'+ users_count);
+    socket.on('disconnect', function () {
+        users_count-=1;
+        console.log('a user dis-connected, number of users:'+ users_count);
+    });
 
-});
+
+    if(events != events_old){
+        socket.emit('evets', events);
+        console.log("event has changed: " + events);
+        events_old = events;
+    }
 
 });
 
@@ -128,8 +139,29 @@ var server_python = net.createServer(function(client) {
     // When receive client data.
     client.on('data', function (data) {
 
+
         // Print received client data and length.
         console.log('python Receive client send data : ' + data + ', data size : ' + client.bytesRead);
+
+        if(data = "event0"){
+            events = 0;
+            client.write("events is now:  " + events);
+        } else if (data = "event1") {
+            events = 1;
+            client.write("events is now:  " + events);
+        } else if (data = "event2") {
+            events = 2;
+            client.write("events is now:  " + events);
+        } else if (data = "event3") {
+            events = 3;
+            client.write("events is now:  " + events);
+        } else if (data = "event4") {
+            events = 4;
+            client.write("events is now:  " + events);
+        } else if (data = "event5") {
+            events = 5;
+            client.write("events is now:  " + events);
+        }
 
         client.write("clicked:  " + counter0 + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5)
         

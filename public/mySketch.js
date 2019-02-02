@@ -5,6 +5,9 @@ var sound4;
 var sound5;
 var sound6;
 
+var events = 0;
+var events_old = 0;
+
 var waitTime;
 var startTime;
 var sounds=[];
@@ -46,8 +49,11 @@ socket.on('click_count3',function(value) {counter3 = value;});
 socket.on('click_count4',function(value) {counter4 = value;});
 socket.on('click_count5',function(value) {counter5 = value;});
 
-function preload() {
+// 
+socket.on('evets',function(value) {events = value;});
 
+
+function preload() {
 
  sound1 = new Audio('assets/Sound0.mp3');
  sound2 = new Audio('assets/Sound1.mp3');
@@ -55,7 +61,12 @@ function preload() {
  sound4 = new Audio('assets/Sound3.mp3');
  sound5 = new Audio('assets/Sound4.mp3');
  sound6 = new Audio('assets/Sound5.mp3');
-
+ sound7 = new Audio('assets/Sound6.mp3');
+ sound8 = new Audio('assets/Sound7.mp3');
+ sound9 = new Audio('assets/Sound8.mp3');
+ sound10 = new Audio('assets/Sound9.mp3');
+ sound11 = new Audio('assets/Sound10.mp3');
+ sound12 = new Audio('assets/Sound11.mp3');
 
  sounds[0] = new Audio('assets/Sound0.mp3');
  sounds[1] = new Audio('assets/Sound1.mp3');
@@ -63,6 +74,12 @@ function preload() {
  sounds[3] = new Audio('assets/Sound3.mp3');
  sounds[4] = new Audio('assets/Sound4.mp3');
  sounds[5] = new Audio('assets/Sound5.mp3');
+ sounds[6] = new Audio('assets/Sound6.mp3');
+ sounds[7] = new Audio('assets/Sound7.mp3');
+ sounds[8] = new Audio('assets/Sound8.mp3');
+ sounds[9] = new Audio('assets/Sound9.mp3');
+ sounds[10] = new Audio('assets/Sound10.mp3');
+ sounds[11] = new Audio('assets/Sound11.mp3');
 
 }
 
@@ -72,7 +89,7 @@ background(100);
   startTime = 0;
   waitTime = 15000; // 3 segundos
 
-  colours[0] = color('#3E78B2');
+colours[0] = color('#3E78B2');
 colours[1] = color('#FA8334');
 colours[2] = color('#976BAE');
 colours[3] = color('#F3CA40');
@@ -134,8 +151,13 @@ fill(0);
         secuenceNumber=0;
       }
       startTime = millis();
-}
+	}
   }
+
+	if(events != events_old){
+		console.log("event has changed: " + events);
+		events_old = events;
+	}
 }
 
 function mousePressed(){
