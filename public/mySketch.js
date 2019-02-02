@@ -14,7 +14,7 @@ var boton3;
 var boton4;
 var boton5;
 var boton6;
-var perfomanceCase=1;
+var perfomanceCase=2;
 var alreadyExecute=false;
 
 
@@ -332,24 +332,26 @@ function mousePressed(){
 // FIRST COLUMN
 
 if(perfomanceCase==1){
-if(mouseX>width/4 -75 &&  mouseX< width/4 +75 ){
-if(mouseY>height/4 -50 && mouseY< height/4 +50){
+if(mouseX>0 &&  mouseX< width/2  ){
+if(mouseY>0  && mouseY< height/3 ){
       sounds[0].loop = true;
       sounds[0].play();
-socket.emit('clicked0');//Emitting user click
-boton1=true;
+      socket.emit('clicked0');//Emitting user click
+      boton1=true;
 }
 }
-if(mouseX>width/4 -75 &&  mouseX< width/4 +75 ){
-if(mouseY>2*height/4 -50 && mouseY< 2*height/4 +50){
+
+if(mouseX>0 &&  mouseX< width/2 ){
+if(mouseY>height/3 && mouseY< 2*height/3 ){
       sounds[1].loop = true;
       sounds[1].play();
-socket.emit('clicked1');//Emitting user click
-boton2=true;
+      socket.emit('clicked1');//Emitting user click
+      boton2=true;
 }
 }
-if(mouseX>width/4 -75 &&  mouseX< width/4 +75 ){
-if(mouseY>3*height/4 -50 && mouseY< 3*height/4 +50){
+
+if(mouseX>0 &&  mouseX< width/2 ){
+if(mouseY>2*height/3 && mouseY< 3*height/3){
       sounds[2].loop = true;
       sounds[2].play();
 socket.emit('clicked2');//Emitting user click
@@ -357,24 +359,24 @@ boton3=true;
 }
 }
 // SECOND COLUMN
-if(mouseX>3*width/4 -75 &&  mouseX< 3*width/4 +75 ){
-if(mouseY>height/4 -50 && mouseY< height/4 +50){
+if(mouseX>width/2 &&  mouseX< width ){
+if(mouseY>0  && mouseY< height/3){
       sounds[3].loop = true;
       sounds[3].play();
 socket.emit('clicked3');//Emitting user click
 boton4=true;
 }
 }
-if(mouseX>3*width/4 -75 &&  mouseX< 3*width/4 +75 ){
-if(mouseY>2*height/4 -50 && mouseY< 2*height/4 +50){
+if(mouseX>width/2 &&  mouseX< width ){
+if(mouseY>height/3 && mouseY< 2*height/3){
       sounds[4].loop = true;
       sounds[4].play();
 socket.emit('clicked4');//Emitting user click
 boton5=true;
 }
 }
-if(mouseX>3*width/4 -75 &&  mouseX< 3*width/4 +75 ){
-if(mouseY>3*height/4 -50 && mouseY< 3*height/4 +50){
+if(mouseX>width/2 &&  mouseX< width ){
+if(mouseY>2*height/3 && mouseY< 3*height/3){
       sounds[5].loop = true;
       sounds[5].play();
 socket.emit('clicked5');//Emitting user click
@@ -384,55 +386,57 @@ boton6=true;
 }
    ////// CASE TWO ////////
 if(perfomanceCase==2){
-if(mouseX>width/4 -75 &&  mouseX< width/4 +75 ){
-if(mouseY>height/4 -50 && mouseY< height/4 +50){
-      sounds[0].loop = true;
-      sounds[0].play();
-socket.emit('clicked0');//Emitting user click
-boton1=true;
-}
-}
-if(mouseX>width/4 -75 &&  mouseX< width/4 +75 ){
-if(mouseY>2*height/4 -50 && mouseY< 2*height/4 +50){
-      sounds[1].loop = true;
-      sounds[1].play();
-socket.emit('clicked1');//Emitting user click
-boton2=true;
-}
-}
-if(mouseX>width/4 -75 &&  mouseX< width/4 +75 ){
-if(mouseY>3*height/4 -50 && mouseY< 3*height/4 +50){
-      sounds[2].loop = true;
-      sounds[2].play();
-socket.emit('clicked2');//Emitting user click
-boton3=true;
-}
-}
-// SECOND COLUMN
-if(mouseX>3*width/4 -75 &&  mouseX< 3*width/4 +75 ){
-if(mouseY>height/4 -50 && mouseY< height/4 +50){
-      sounds[3].loop = true;
-      sounds[3].play();
-socket.emit('clicked3');//Emitting user click
-boton4=true;
-}
-}
-if(mouseX>3*width/4 -75 &&  mouseX< 3*width/4 +75 ){
-if(mouseY>2*height/4 -50 && mouseY< 2*height/4 +50){
-      sounds[4].loop = true;
-      sounds[4].play();
-socket.emit('clicked4');//Emitting user click
-boton5=true;
-}
-}
-if(mouseX>3*width/4 -75 &&  mouseX< 3*width/4 +75 ){
-if(mouseY>3*height/4 -50 && mouseY< 3*height/4 +50){
-      sounds[5].loop = true;
-      sounds[5].play();
-socket.emit('clicked5');//Emitting user click
-boton6=true;
-}
-}
+  if(mouseX>0 &&  mouseX< width/2  ){
+  if(mouseY>0  && mouseY< height/3 ){
+        sounds[0].loop = true;
+        sounds[0].play();
+        socket.emit('clicked0');//Emitting user click
+        boton1=true;
+  }
+  }
+
+  if(mouseX>0 &&  mouseX< width/2 ){
+  if(mouseY>height/3 && mouseY< 2*height/3 ){
+        sounds[1].loop = true;
+        sounds[1].play();
+        socket.emit('clicked1');//Emitting user click
+        boton2=true;
+  }
+  }
+
+  if(mouseX>0 &&  mouseX< width/2 ){
+  if(mouseY>2*height/3 && mouseY< 3*height/3){
+        sounds[2].loop = true;
+        sounds[2].play();
+  socket.emit('clicked2');//Emitting user click
+  boton3=true;
+  }
+  }
+  // SECOND COLUMN
+  if(mouseX>width/2 &&  mouseX< width ){
+  if(mouseY>0  && mouseY< height/3){
+        sounds[3].loop = true;
+        sounds[3].play();
+  socket.emit('clicked3');//Emitting user click
+  boton4=true;
+  }
+  }
+  if(mouseX>width/2 &&  mouseX< width ){
+  if(mouseY>height/3 && mouseY< 2*height/3){
+        sounds[4].loop = true;
+        sounds[4].play();
+  socket.emit('clicked4');//Emitting user click
+  boton5=true;
+  }
+  }
+  if(mouseX>width/2 &&  mouseX< width ){
+  if(mouseY>2*height/3 && mouseY< 3*height/3){
+        sounds[5].loop = true;
+        sounds[5].play();
+  socket.emit('clicked5');//Emitting user click
+  boton6=true;
+  }
+  }
 }
 
 
