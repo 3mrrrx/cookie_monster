@@ -21,7 +21,7 @@ var counter5=0;//Initial counter value
 
 var events = 0;
 var events_old 
-
+var code; 
 
 // app.get('/', function(req, res) {
 
@@ -143,24 +143,47 @@ var server_python = net.createServer(function(client) {
         // Print received client data and length.
         console.log('python Receive client send data : ' + data + ', data size : ' + client.bytesRead);
 
-        if(data = "event0"){
+        //        code = data.toString().slice(0,6);
+        code = data.toString();
+        console.log('code is code = ' + code);
+
+
+        if( code == 'event0'){
             events = 0;
+            server.emit('events',events);//send to all users new counter value
             client.write("events is now:  " + events);
-        } else if (data = "event1") {
+            console.log('events is now:  ' + events);
+
+        } else if ( code == 'event1') {
             events = 1;
+            server.emit('events',events);//send to all users new counter value
             client.write("events is now:  " + events);
-        } else if (data = "event2") {
+            console.log('events is now:  ' + events);
+
+        } else if ( code == 'event2') {
             events = 2;
+            server.emit('events',events);//send to all users new counter value
             client.write("events is now:  " + events);
-        } else if (data = "event3") {
+            console.log('events is now:  ' + events);
+
+        } else if ( code == 'event3') {
             events = 3;
+            server.emit('events',events);//send to all users new counter value
             client.write("events is now:  " + events);
-        } else if (data = "event4") {
+            console.log('events is now:  ' + events);
+
+        } else if ( code == 'event4') {
             events = 4;
+            server.emit('events',events);//send to all users new counter value
             client.write("events is now:  " + events);
-        } else if (data = "event5") {
+            console.log('events is now:  ' + events);
+
+        } else if ( code == 'event5') {
             events = 5;
+            server.emit('events',events);//send to all users new counter value
             client.write("events is now:  " + events);
+            console.log('events is now:  ' + events);
+
         }
 
         client.write("clicked:  " + counter0 + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5)

@@ -50,7 +50,7 @@ socket.on('click_count4',function(value) {counter4 = value;});
 socket.on('click_count5',function(value) {counter5 = value;});
 
 // 
-socket.on('evets',function(value) {events = value;});
+socket.on('events',function(value) {events = value;});
 
 
 function preload() {
