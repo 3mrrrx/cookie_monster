@@ -281,7 +281,7 @@ function draw() {
   	}
 
   	if( finishTimeCase3 > millis()){
-	    console.log("ENTRAAAA");
+	    //console.log("ENTRAAAA");
 	    sounds[9].loop = false;
 	    sounds[ 9 ].play();
 	    alreadyExecute=true;
