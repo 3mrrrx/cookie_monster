@@ -14,7 +14,7 @@ var boton3;
 var boton4;
 var boton5;
 var boton6;
-var perfomanceCase=2;
+
 var alreadyExecute=false;
 
 
@@ -123,7 +123,7 @@ boton6=false;
 function draw() {
 //background(100);
   //background(colours[ 1
-if(perfomanceCase==1){
+if(events==1){
 noStroke();
   // FIRST COLUMN
   //textFont('Gotham');
@@ -199,7 +199,7 @@ fill(0);
 }
 
 
-if(perfomanceCase==2){
+if(events==2){
 noStroke();
   // FIRST COLUMN
   //textFont('Gotham');
@@ -274,7 +274,7 @@ fill(0);
   text("6"/*counter5*/,3*width/4  ,3*height/4  );
 }
   //console.log("millis: "+parseInt(millis())+" TiempoInicio: "+parseInt(startTime));
-if(perfomanceCase==3){
+if(events==3){
   background('#9478C0');
   if(alreadyExecute==false){
     finishTimeCase3=millis()+52000;
@@ -310,13 +310,13 @@ if(perfomanceCase==3){
   */
   }
 
-if(perfomanceCase==4){
+if(events==4){
   background('#FF9F1C' );
 }
-if(perfomanceCase==5){
+if(events==5){
   background( ' #2EC4B6' );
 }
-if(perfomanceCase==6){
+if(events==6){
   background( '#A896C2' );
 }
 
@@ -331,7 +331,7 @@ function mousePressed(){
 
 // FIRST COLUMN
 
-if(perfomanceCase==1){
+if(events==1){
 if(mouseX>0 &&  mouseX< width/2  ){
 if(mouseY>0  && mouseY< height/3 ){
       sounds[0].loop = true;
@@ -385,7 +385,7 @@ boton6=true;
 }
 }
    ////// CASE TWO ////////
-if(perfomanceCase==2){
+if(events==2){
   if(mouseX>0 &&  mouseX< width/2  ){
   if(mouseY>0  && mouseY< height/3 ){
         sounds[0].loop = true;

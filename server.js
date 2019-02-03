@@ -183,6 +183,12 @@ var server_python = net.createServer(function(client) {
             server.emit('events',events);//send to all users new counter value
             client.write("events is now:  " + events);
             console.log('events is now:  ' + events);
+        
+        } else if ( code == 'event6') {
+            events = 6;
+            server.emit('events',events);//send to all users new counter value
+            client.write("events is now:  " + events);
+            console.log('events is now:  ' + events);
 
         }
 
