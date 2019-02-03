@@ -5,8 +5,8 @@ var sound4;
 var sound5;
 var sound6;
 
-var events = 0;
-var events_old = 0;
+var events = 3;
+var events_old = 3;
 
 var boton1;
 var boton2;
