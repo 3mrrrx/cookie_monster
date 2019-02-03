@@ -5,7 +5,7 @@ var sound4;
 var sound5;
 var sound6;
 
-var events = 3;
+var events = 1;
 var events_old = 1;
 
 var boton1;
@@ -100,7 +100,7 @@ function preload() {
 
 function setup() {
 createCanvas(windowWidth, windowHeight);
-background('#D7DCD7');
+//background('#D7DCD7');
   startTime = 0;
   waitTime = 1500; // 3 segundos
 
@@ -121,8 +121,7 @@ boton6=false;
 }
 
 function draw() {
-	//background(100);
-	  //background(colours[ 1
+
 	if(events==1){
 	noStroke();
 	  // FIRST COLUMN
