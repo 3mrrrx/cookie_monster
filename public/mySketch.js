@@ -5,8 +5,8 @@ var sound4;
 var sound5;
 var sound6;
 
-var events = 3;
-var events_old = 3;
+var events = 1;
+var events_old = 1;
 
 var boton1;
 var boton2;
@@ -63,8 +63,8 @@ socket.on('click_count4',function(value) {counter4 = value;});
 socket.on('click_count5',function(value) {counter5 = value;});
 
 //
-socket.on('events',function(value) {events = value;});
-
+//socket.on('events',function(value) {events = value;});
+socket.on('events',function(value) {events = parseInt(value);});
 
 function preload() {
 /*
@@ -321,9 +321,10 @@ if(events==6){
 }
 
 if(events != events_old){
-console.log("event has changed: " + events);
-events_old = events;
+	console.log("event has changed: " + events);
+	events_old = events;
 }
+
 }
 
 function mousePressed(){
