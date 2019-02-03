@@ -123,7 +123,8 @@ boton6=false;
 function draw() {
 
 	if(events==1){
-	noStroke();
+		console.log("ENTRAAAA--------111--------");
+		noStroke();
 	  // FIRST COLUMN
 	  //textFont('Gotham');
 	//textAlign(CENTER);
@@ -199,7 +200,7 @@ function draw() {
 
 
 	if(events==2){
-
+	console.log("ENTRAAAA--------111--------");
 	noStroke();
 	  // FIRST COLUMN
 	  //textFont('Gotham');
@@ -275,7 +276,7 @@ function draw() {
 	}
 	  //console.log("millis: "+parseInt(millis())+" TiempoInicio: "+parseInt(startTime));
 	if(events==3){
-	console.log("ENTRAAAA----------------");
+	console.log("ENTRAAAA--------333--------");
 
 	  background('#9478C0');
 	  if(alreadyExecute==false){
@@ -310,7 +311,7 @@ function draw() {
 	   }
 	  }
 	  */
-	  }
+  	}
 
 	if(events==4){
 	  background( '#FF9F1C' );
