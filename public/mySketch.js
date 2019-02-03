@@ -5,7 +5,7 @@ var sound4;
 var sound5;
 var sound6;
 
-var events = 1;
+var events = 3;
 var events_old = 1;
 
 var boton1;
@@ -121,214 +121,215 @@ boton6=false;
 }
 
 function draw() {
-//background(100);
-  //background(colours[ 1
-if(events==1){
-noStroke();
-  // FIRST COLUMN
-  //textFont('Gotham');
-//textAlign(CENTER);
-//textStyle(BOLD);
-if(boton1==false){
-  fill('#FFAD5C');
-}
-else{
-  console.log("here");
-  fill('#D18E4C');
-}
-rect( 10 ,0, width/2-20, height/3 );    // 0
-fill(0);
-textSize(30);
-text( "1" /*counter0*/,width/4  ,height/4  );
-//fill(200,100,100);
-if(boton2==false){
-  fill(' #FF7F00 ');
-}
-else{
-  fill('#D16800');
-}
-rect( 10 , height/3 , width/2-20, height/3 );    // 1
-fill(0);
-textSize(30);
-text("2"/*counter1*/,width/4  ,2*height/4  );
-//fill(200,100,200);
-if(boton3==false){
-  fill(' #BA5D00 ');
-}
-else{
-  fill('#AA5500');
-}
-rect( 10 , 2*height/3, width/2-20, height/3 );   // 2
-fill(0);
-  textSize(30);
-  text("3" /*counter2*/,width/4  ,3*height/4  );
-  // SECOND COLUMN
-  //fill('#59CD90');
-  if(boton4==false){
-    fill(' #B8A5D5 ');
-  }
-  else{
-    fill('#A896C2');
-  }
-rect( width/2+10 ,0, width/2-20, height/3 );     // 3
-fill(0);
-  textSize(30);
-  text("4" /*counter3*/,3*width/4  ,height/4  );
-fill('#4381C1');
-if(boton5==false){
-  fill(' #9478C0 ');
-}
-else{
-  fill(' #876EAF ');
-}
-rect( width/2+10 ,height/3, width/2-20, height/3 );   // 4
-fill(0);
-  textSize(30);
-  text("5"/*counter4*/,3*width/4  ,2*height/4  );
-//fill('#D86152');
-if(boton6==false){
-  fill(' #7D5AB2 ');
-}
-else{
-  fill(' #7252A2 ');
-}
-rect( width/2+10 ,2*height/3, width/2-20, height/3 );   // 5
-fill(0);
-  textSize(30);
-  text("6"/*counter5*/,3*width/4  ,3*height/4  );
-}
+	//background(100);
+	  //background(colours[ 1
+	if(events==1){
+	noStroke();
+	  // FIRST COLUMN
+	  //textFont('Gotham');
+	//textAlign(CENTER);
+	//textStyle(BOLD);
+	if(boton1==false){
+	  fill('#FFAD5C');
+	}
+	else{
+	  console.log("here");
+	  fill('#D18E4C');
+	}
+	rect( 10 ,0, width/2-20, height/3 );    // 0
+	fill(0);
+	textSize(30);
+	text( "1" /*counter0*/,width/4  ,height/4  );
+	//fill(200,100,100);
+	if(boton2==false){
+	  fill(' #FF7F00 ');
+	}
+	else{
+	  fill('#D16800');
+	}
+	rect( 10 , height/3 , width/2-20, height/3 );    // 1
+	fill(0);
+	textSize(30);
+	text("2"/*counter1*/,width/4  ,2*height/4  );
+	//fill(200,100,200);
+	if(boton3==false){
+	  fill(' #BA5D00 ');
+	}
+	else{
+	  fill('#AA5500');
+	}
+	rect( 10 , 2*height/3, width/2-20, height/3 );   // 2
+	fill(0);
+	  textSize(30);
+	  text("3" /*counter2*/,width/4  ,3*height/4  );
+	  // SECOND COLUMN
+	  //fill('#59CD90');
+	  if(boton4==false){
+	    fill(' #B8A5D5 ');
+	  }
+	  else{
+	    fill('#A896C2');
+	  }
+	rect( width/2+10 ,0, width/2-20, height/3 );     // 3
+	fill(0);
+	  textSize(30);
+	  text("4" /*counter3*/,3*width/4  ,height/4  );
+	fill('#4381C1');
+	if(boton5==false){
+	  fill(' #9478C0 ');
+	}
+	else{
+	  fill(' #876EAF ');
+	}
+	rect( width/2+10 ,height/3, width/2-20, height/3 );   // 4
+	fill(0);
+	  textSize(30);
+	  text("5"/*counter4*/,3*width/4  ,2*height/4  );
+	//fill('#D86152');
+	if(boton6==false){
+	  fill(' #7D5AB2 ');
+	}
+	else{
+	  fill(' #7252A2 ');
+	}
+	rect( width/2+10 ,2*height/3, width/2-20, height/3 );   // 5
+	fill(0);
+	  textSize(30);
+	  text("6"/*counter5*/,3*width/4  ,3*height/4  );
+	}
 
 
-if(events==2){
-noStroke();
-  // FIRST COLUMN
-  //textFont('Gotham');
-//textAlign(CENTER);
-//textStyle(BOLD);
-if(boton1==false){
-  fill('#FFAD5C');
-}
-else{
-  console.log("here");
-  fill('#D18E4C');
-}
-rect( 10 ,0, width/2-20, height/3 );    // 0
-fill(0);
-textSize(30);
-text( "1" /*counter0*/,width/4  ,height/4  );
-//fill(200,100,100);
-if(boton2==false){
-  fill(' #FF7F00 ');
-}
-else{
-  fill('#D16800');
-}
-rect( 10 , height/3 , width/2-20, height/3 );    // 1
-fill(0);
-textSize(30);
-text("2"/*counter1*/,width/4  ,2*height/4  );
-//fill(200,100,200);
-if(boton3==false){
-  fill(' #BA5D00 ');
-}
-else{
-  fill('#AA5500');
-}
-rect( 10 , 2*height/3, width/2-20, height/3 );   // 2
-fill(0);
-  textSize(30);
-  text("3" /*counter2*/,width/4  ,3*height/4  );
-  // SECOND COLUMN
-  //fill('#59CD90');
-  if(boton4==false){
-    fill(' #B8A5D5 ');
-  }
-  else{
-    fill('#A896C2');
-  }
-rect( width/2+10 ,0, width/2-20, height/3 );     // 3
-fill(0);
-  textSize(30);
-  text("4" /*counter3*/,3*width/4  ,height/4  );
-fill('#4381C1');
-if(boton5==false){
-  fill(' #9478C0 ');
-}
-else{
-  fill(' #876EAF ');
-}
-rect( width/2+10 ,height/3, width/2-20, height/3 );   // 4
-fill(0);
-  textSize(30);
-  text("5"/*counter4*/,3*width/4  ,2*height/4  );
-//fill('#D86152');
-if(boton6==false){
-  fill(' #7D5AB2 ');
-}
-else{
-  fill(' #7252A2 ');
-}
-rect( width/2+10 ,2*height/3, width/2-20, height/3 );   // 5
-fill(0);
-  textSize(30);
-  text("6"/*counter5*/,3*width/4  ,3*height/4  );
-}
-  //console.log("millis: "+parseInt(millis())+" TiempoInicio: "+parseInt(startTime));
-if(events==3){
-  background('#9478C0');
-  if(alreadyExecute==false){
-    finishTimeCase3=millis()+52000;
-    alreadyExecute=true;
-  }
-  if( finishTimeCase3 > millis()){
-    console.log("ENTRAAAA");
-    sounds[9].loop = false;
-    sounds[ 9 ].play();
-    alreadyExecute=true;
-  }
+	if(events==2){
+	noStroke();
+	  // FIRST COLUMN
+	  //textFont('Gotham');
+	//textAlign(CENTER);
+	//textStyle(BOLD);
+	if(boton1==false){
+	  fill('#FFAD5C');
+	}
+	else{
+	  console.log("here");
+	  fill('#D18E4C');
+	}
+	rect( 10 ,0, width/2-20, height/3 );    // 0
+	fill(0);
+	textSize(30);
+	text( "1" /*counter0*/,width/4  ,height/4  );
+	//fill(200,100,100);
+	if(boton2==false){
+	  fill(' #FF7F00 ');
+	}
+	else{
+	  fill('#D16800');
+	}
+	rect( 10 , height/3 , width/2-20, height/3 );    // 1
+	fill(0);
+	textSize(30);
+	text("2"/*counter1*/,width/4  ,2*height/4  );
+	//fill(200,100,200);
+	if(boton3==false){
+	  fill(' #BA5D00 ');
+	}
+	else{
+	  fill('#AA5500');
+	}
+	rect( 10 , 2*height/3, width/2-20, height/3 );   // 2
+	fill(0);
+	  textSize(30);
+	  text("3" /*counter2*/,width/4  ,3*height/4  );
+	  // SECOND COLUMN
+	  //fill('#59CD90');
+	  if(boton4==false){
+	    fill(' #B8A5D5 ');
+	  }
+	  else{
+	    fill('#A896C2');
+	  }
+	rect( width/2+10 ,0, width/2-20, height/3 );     // 3
+	fill(0);
+	  textSize(30);
+	  text("4" /*counter3*/,3*width/4  ,height/4  );
+	fill('#4381C1');
+	if(boton5==false){
+	  fill(' #9478C0 ');
+	}
+	else{
+	  fill(' #876EAF ');
+	}
+	rect( width/2+10 ,height/3, width/2-20, height/3 );   // 4
+	fill(0);
+	  textSize(30);
+	  text("5"/*counter4*/,3*width/4  ,2*height/4  );
+	//fill('#D86152');
+	if(boton6==false){
+	  fill(' #7D5AB2 ');
+	}
+	else{
+	  fill(' #7252A2 ');
+	}
+	rect( width/2+10 ,2*height/3, width/2-20, height/3 );   // 5
+	fill(0);
+	  textSize(30);
+	  text("6"/*counter5*/,3*width/4  ,3*height/4  );
+	}
+	  //console.log("millis: "+parseInt(millis())+" TiempoInicio: "+parseInt(startTime));
+	if(events==3){
+	  background('#9478C0');
+	  if(alreadyExecute==false){
+	    finishTimeCase3=millis()+52000;
+	    alreadyExecute=true;
+  	}
 
-  /*
-  hours=hour();
-  minutes=minute();
-  seconds=second();
+  	if( finishTimeCase3 > millis()){
+	    console.log("ENTRAAAA");
+	    sounds[9].loop = false;
+	    sounds[ 9 ].play();
+	    alreadyExecute=true;
+  	}
 
-  console.log("hour: "+hours+" Minute: "+minutes+" Seconds: "+seconds);
-  if(hours>=18 && minutes>=27 ){
-    console.log("Here");
-    if (millis() - startTime > waitTime) {
-      console.log(parseInt(secuenceNumber));
-      sounds[ parseInt(secuenceNumber) ].play();
-      background(colours[ parseInt(secuenceNumber) ]);
-      //sounds[ 0 ].play();
-      secuenceNumber++;
-      if(secuenceNumber>5){
-        secuenceNumber=0;
-      }
-      startTime = millis();
-   }
-  }
-  */
-  }
+	  /*
+	  hours=hour();
+	  minutes=minute();
+	  seconds=second();
 
-if(events==4){
-  background('#FF9F1C' );
+	  console.log("hour: "+hours+" Minute: "+minutes+" Seconds: "+seconds);
+	  if(hours>=18 && minutes>=27 ){
+	    console.log("Here");
+	    if (millis() - startTime > waitTime) {
+	      console.log(parseInt(secuenceNumber));
+	      sounds[ parseInt(secuenceNumber) ].play();
+	      background(colours[ parseInt(secuenceNumber) ]);
+	      //sounds[ 0 ].play();
+	      secuenceNumber++;
+	      if(secuenceNumber>5){
+	        secuenceNumber=0;
+	      }
+	      startTime = millis();
+	   }
+	  }
+	  */
+	  }
+
+	if(events==4){
+	  background( '#FF9F1C' );
+	}
+	if(events==5){
+	  background( '#2EC4B6' );
+	}
+	if(events==6){
+	  background( '#A896C2' );
+	}
+
+	if(events != events_old){
+		console.log("event has changed: " + events);
+		events_old = events;
+	}
+
 }
-if(events==5){
-  background( ' #2EC4B6' );
-}
-if(events==6){
-  background( '#A896C2' );
-}
 
-if(events != events_old){
-	console.log("event has changed: " + events);
-	events_old = events;
-}
-
-}
-
-function mousePressed(){
-
+//function mousePressed(){
+function touchStarted(){
 
 // FIRST COLUMN
 
@@ -443,8 +444,8 @@ if(events==2){
 
 }
 
-function mouseReleased(){
-
+//function mouseReleased(){
+function touchEnded(){
   sounds[0].pause();
   sounds[0].currentTime = 0;
   sounds[1].pause();
