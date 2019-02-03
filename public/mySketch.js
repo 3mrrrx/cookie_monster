@@ -199,6 +199,7 @@ function draw() {
 
 
 	if(events==2){
+
 	noStroke();
 	  // FIRST COLUMN
 	  //textFont('Gotham');
@@ -274,6 +275,8 @@ function draw() {
 	}
 	  //console.log("millis: "+parseInt(millis())+" TiempoInicio: "+parseInt(startTime));
 	if(events==3){
+	console.log("ENTRAAAA----------------");
+
 	  background('#9478C0');
 	  if(alreadyExecute==false){
 	    finishTimeCase3=millis()+52000;
@@ -281,7 +284,6 @@ function draw() {
   	}
 
   	if( finishTimeCase3 > millis()){
-	    //console.log("ENTRAAAA");
 	    sounds[9].loop = false;
 	    sounds[ 9 ].play();
 	    alreadyExecute=true;
