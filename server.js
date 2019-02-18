@@ -4,8 +4,8 @@ var net = require('net');
 var app=express();
 var http = require('http').Server(app);
 var server = require('socket.io')(http);
-var port=8081;
-var port_python=8082;
+var port=8080;
+var port_python=8081;
 
 
 
