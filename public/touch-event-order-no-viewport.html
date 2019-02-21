@@ -4,14 +4,14 @@
   <meta charset=utf-8 />
 <script>
 var log = function(msg) {
-  return function(e) { 
+  return function(e) {
    var pre = $("pre");
-    pre.append("EVENT (" + new Date().getTime() + "): "  + msg + "\n");
+    pre.append("EVENT (" + new Date().getTime() + "): dev nr."+ event.target.id + " "  + msg + "\n");
    if(e.originalEvent.type == "touchmove") e.preventDefault();
    pre[0].scrollTop = pre.height();
   };
 };
-     
+
 $(function() {
   $("div").on("mousedown", log("mousedown"));
   $("div").on("mouseup", log("mouseup"));
@@ -38,11 +38,11 @@ div {
  height: 200px;
  vertical-align: middle;
 }
-    
+
 #edit-with-js-bin {
- display: none; 
+ display: none;
 }
-    
+
 pre {
  box-shadow: inset 0px 0px 5px black;
  height: 200px;
@@ -51,11 +51,11 @@ pre {
 </style>
 </head>
 <body>
-<div>1</div>
-<div>2</div>
-<div>3</div>
+<div id="1"><p>1</p></div>
+<div id="2"><p>2</p></div>
+<div id="3"><p>3</p></div>
 <h2>Output</h2>
 <pre></pre>
 </body>
 </html>
-<!--<meta name="viewport" content="width=device-width,user-scalable=no"> -->	
+<!--<meta name="viewport" content="width=device-width,user-scalable=no"> -->
