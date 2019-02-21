@@ -276,7 +276,7 @@ function draw() {
 	}
 	  //console.log("millis: "+parseInt(millis())+" TiempoInicio: "+parseInt(startTime));
 	if(events==3){
-	console.log("ENTRAAAA--------333--------");
+	//console.log("ENTRAAAA--------333--------");
 
 	  background('#9478C0');
 	  if(alreadyExecute==false){
@@ -483,4 +483,3 @@ function touchEnded(){
 
   */
 }
-
