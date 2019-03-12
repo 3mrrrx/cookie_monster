@@ -123,7 +123,7 @@ boton6=false;
 function draw() {
 
 	if(events==1){
-		console.log("ENTRAAAA--------111--------");
+		//console.log("ENTRAAAA--------111--------");
 		noStroke();
 	  // FIRST COLUMN
 	  //textFont('Gotham');
@@ -133,7 +133,7 @@ function draw() {
 	  fill('#FFAD5C');
 	}
 	else{
-	  console.log("here");
+	  //console.log("here");
 	  fill('#D18E4C');
 	}
 	rect( 10 ,0, width/2-20, height/3 );    // 0
@@ -190,7 +190,7 @@ function draw() {
 	  fill(' #7D5AB2 ');
 	}
 	else{
-	  fill(' #7252A2 ');
+	  fill(' #7252A2 '); 
 	}
 	rect( width/2+10 ,2*height/3, width/2-20, height/3 );   // 5
 	fill(0);

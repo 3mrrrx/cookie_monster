@@ -4,15 +4,22 @@
 /*prevents scrollbars from popping up due to size adjustments made from centering*/
 html,body,.activecontainer{overflow:hidden;}
 
+#myCanvas {
+  border-width: 1px;
+  border-style: solid;
+  border-color: Black;
+}
+
+
 #activecontainer{
   position:absolute;
   top: 1%; /* (+) offset by 1x AMOUNT*/
   left: 1%;
   /*transform: translate(-50%, -50%); */
   display:inline-block;
-  height:100%;
-  max-height:100%;
-  min-height:100% !important;
+  height:98%;
+  max-height:98%;
+  min-height:98% !important;
   max-width:98%;
   min-width:98% !important;
 
@@ -59,7 +66,7 @@ html,body,.activecontainer{overflow:hidden;}
 
   /*CONTENT: TEXT*/
   font-weight: bold;
-  font-size: 2em;
+  font-size: 7em;
   text-align: center;
   color: white;
 
